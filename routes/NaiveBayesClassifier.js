@@ -190,7 +190,7 @@ Bayes.train("Im getting assigned a new project!", "happy");
 Bayes.train("I am so excited that I got this job!", "happy");
 Bayes.train("You are the best");
 Bayes.train("I love you");
-Bayes.train("I love you to"):
+Bayes.train("I love you to");
 Bayes.train("I love you too");
 Bayes.train("I’m so excited",  "Happy");
 Bayes.train("Happy Birthday", "Happy");
