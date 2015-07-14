@@ -1,13 +1,12 @@
 var express = require('express');
 var path = require('path');
-var mongoose = require('mongoose');
 var http = require('http');
 var fs = require('fs');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var users = require('./routes/users');
+var mood = require('./routes/mood.js');
 
 var app = express();
 
@@ -22,11 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// Connect to database
-mongoose.connect('mongodb://localhost/Expo-API');
-
-app.use('/users', users);
+app.use('/mood', mood);
 
 
 // catch 404 and forward to error handler
